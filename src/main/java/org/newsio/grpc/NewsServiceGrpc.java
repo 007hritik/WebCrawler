@@ -28,35 +28,67 @@ public final class NewsServiceGrpc {
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<org.newsio.grpc.Newsio.noParams,
-      org.newsio.grpc.Newsio.News> getFetchLatestNewsMethod;
+      org.newsio.grpc.Newsio.News> getFetchLatestTechNewsMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "fetchLatestNews",
+      fullMethodName = SERVICE_NAME + '/' + "fetchLatestTechNews",
       requestType = org.newsio.grpc.Newsio.noParams.class,
       responseType = org.newsio.grpc.Newsio.News.class,
       methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
   public static io.grpc.MethodDescriptor<org.newsio.grpc.Newsio.noParams,
-      org.newsio.grpc.Newsio.News> getFetchLatestNewsMethod() {
-    io.grpc.MethodDescriptor<org.newsio.grpc.Newsio.noParams, org.newsio.grpc.Newsio.News> getFetchLatestNewsMethod;
-    if ((getFetchLatestNewsMethod = NewsServiceGrpc.getFetchLatestNewsMethod) == null) {
+      org.newsio.grpc.Newsio.News> getFetchLatestTechNewsMethod() {
+    io.grpc.MethodDescriptor<org.newsio.grpc.Newsio.noParams, org.newsio.grpc.Newsio.News> getFetchLatestTechNewsMethod;
+    if ((getFetchLatestTechNewsMethod = NewsServiceGrpc.getFetchLatestTechNewsMethod) == null) {
       synchronized (NewsServiceGrpc.class) {
-        if ((getFetchLatestNewsMethod = NewsServiceGrpc.getFetchLatestNewsMethod) == null) {
-          NewsServiceGrpc.getFetchLatestNewsMethod = getFetchLatestNewsMethod = 
+        if ((getFetchLatestTechNewsMethod = NewsServiceGrpc.getFetchLatestTechNewsMethod) == null) {
+          NewsServiceGrpc.getFetchLatestTechNewsMethod = getFetchLatestTechNewsMethod = 
               io.grpc.MethodDescriptor.<org.newsio.grpc.Newsio.noParams, org.newsio.grpc.Newsio.News>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
               .setFullMethodName(generateFullMethodName(
-                  "org.newsio.grpc.NewsService", "fetchLatestNews"))
+                  "org.newsio.grpc.NewsService", "fetchLatestTechNews"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   org.newsio.grpc.Newsio.noParams.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   org.newsio.grpc.Newsio.News.getDefaultInstance()))
-                  .setSchemaDescriptor(new NewsServiceMethodDescriptorSupplier("fetchLatestNews"))
+                  .setSchemaDescriptor(new NewsServiceMethodDescriptorSupplier("fetchLatestTechNews"))
                   .build();
           }
         }
      }
-     return getFetchLatestNewsMethod;
+     return getFetchLatestTechNewsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<org.newsio.grpc.Newsio.noParams,
+      org.newsio.grpc.Newsio.News> getFetchLatestPoliticalNewsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "fetchLatestPoliticalNews",
+      requestType = org.newsio.grpc.Newsio.noParams.class,
+      responseType = org.newsio.grpc.Newsio.News.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+  public static io.grpc.MethodDescriptor<org.newsio.grpc.Newsio.noParams,
+      org.newsio.grpc.Newsio.News> getFetchLatestPoliticalNewsMethod() {
+    io.grpc.MethodDescriptor<org.newsio.grpc.Newsio.noParams, org.newsio.grpc.Newsio.News> getFetchLatestPoliticalNewsMethod;
+    if ((getFetchLatestPoliticalNewsMethod = NewsServiceGrpc.getFetchLatestPoliticalNewsMethod) == null) {
+      synchronized (NewsServiceGrpc.class) {
+        if ((getFetchLatestPoliticalNewsMethod = NewsServiceGrpc.getFetchLatestPoliticalNewsMethod) == null) {
+          NewsServiceGrpc.getFetchLatestPoliticalNewsMethod = getFetchLatestPoliticalNewsMethod = 
+              io.grpc.MethodDescriptor.<org.newsio.grpc.Newsio.noParams, org.newsio.grpc.Newsio.News>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+              .setFullMethodName(generateFullMethodName(
+                  "org.newsio.grpc.NewsService", "fetchLatestPoliticalNews"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.newsio.grpc.Newsio.noParams.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.newsio.grpc.Newsio.News.getDefaultInstance()))
+                  .setSchemaDescriptor(new NewsServiceMethodDescriptorSupplier("fetchLatestPoliticalNews"))
+                  .build();
+          }
+        }
+     }
+     return getFetchLatestPoliticalNewsMethod;
   }
 
   /**
@@ -88,20 +120,34 @@ public final class NewsServiceGrpc {
 
     /**
      */
-    public void fetchLatestNews(org.newsio.grpc.Newsio.noParams request,
+    public void fetchLatestTechNews(org.newsio.grpc.Newsio.noParams request,
         io.grpc.stub.StreamObserver<org.newsio.grpc.Newsio.News> responseObserver) {
-      asyncUnimplementedUnaryCall(getFetchLatestNewsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getFetchLatestTechNewsMethod(), responseObserver);
+    }
+
+    /**
+     */
+    public void fetchLatestPoliticalNews(org.newsio.grpc.Newsio.noParams request,
+        io.grpc.stub.StreamObserver<org.newsio.grpc.Newsio.News> responseObserver) {
+      asyncUnimplementedUnaryCall(getFetchLatestPoliticalNewsMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getFetchLatestNewsMethod(),
+            getFetchLatestTechNewsMethod(),
             asyncServerStreamingCall(
               new MethodHandlers<
                 org.newsio.grpc.Newsio.noParams,
                 org.newsio.grpc.Newsio.News>(
-                  this, METHODID_FETCH_LATEST_NEWS)))
+                  this, METHODID_FETCH_LATEST_TECH_NEWS)))
+          .addMethod(
+            getFetchLatestPoliticalNewsMethod(),
+            asyncServerStreamingCall(
+              new MethodHandlers<
+                org.newsio.grpc.Newsio.noParams,
+                org.newsio.grpc.Newsio.News>(
+                  this, METHODID_FETCH_LATEST_POLITICAL_NEWS)))
           .build();
     }
   }
@@ -126,10 +172,18 @@ public final class NewsServiceGrpc {
 
     /**
      */
-    public void fetchLatestNews(org.newsio.grpc.Newsio.noParams request,
+    public void fetchLatestTechNews(org.newsio.grpc.Newsio.noParams request,
         io.grpc.stub.StreamObserver<org.newsio.grpc.Newsio.News> responseObserver) {
       asyncServerStreamingCall(
-          getChannel().newCall(getFetchLatestNewsMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getFetchLatestTechNewsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void fetchLatestPoliticalNews(org.newsio.grpc.Newsio.noParams request,
+        io.grpc.stub.StreamObserver<org.newsio.grpc.Newsio.News> responseObserver) {
+      asyncServerStreamingCall(
+          getChannel().newCall(getFetchLatestPoliticalNewsMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -153,10 +207,18 @@ public final class NewsServiceGrpc {
 
     /**
      */
-    public java.util.Iterator<org.newsio.grpc.Newsio.News> fetchLatestNews(
+    public java.util.Iterator<org.newsio.grpc.Newsio.News> fetchLatestTechNews(
         org.newsio.grpc.Newsio.noParams request) {
       return blockingServerStreamingCall(
-          getChannel(), getFetchLatestNewsMethod(), getCallOptions(), request);
+          getChannel(), getFetchLatestTechNewsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public java.util.Iterator<org.newsio.grpc.Newsio.News> fetchLatestPoliticalNews(
+        org.newsio.grpc.Newsio.noParams request) {
+      return blockingServerStreamingCall(
+          getChannel(), getFetchLatestPoliticalNewsMethod(), getCallOptions(), request);
     }
   }
 
@@ -179,7 +241,8 @@ public final class NewsServiceGrpc {
     }
   }
 
-  private static final int METHODID_FETCH_LATEST_NEWS = 0;
+  private static final int METHODID_FETCH_LATEST_TECH_NEWS = 0;
+  private static final int METHODID_FETCH_LATEST_POLITICAL_NEWS = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -198,8 +261,12 @@ public final class NewsServiceGrpc {
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
-        case METHODID_FETCH_LATEST_NEWS:
-          serviceImpl.fetchLatestNews((org.newsio.grpc.Newsio.noParams) request,
+        case METHODID_FETCH_LATEST_TECH_NEWS:
+          serviceImpl.fetchLatestTechNews((org.newsio.grpc.Newsio.noParams) request,
+              (io.grpc.stub.StreamObserver<org.newsio.grpc.Newsio.News>) responseObserver);
+          break;
+        case METHODID_FETCH_LATEST_POLITICAL_NEWS:
+          serviceImpl.fetchLatestPoliticalNews((org.newsio.grpc.Newsio.noParams) request,
               (io.grpc.stub.StreamObserver<org.newsio.grpc.Newsio.News>) responseObserver);
           break;
         default:
@@ -263,7 +330,8 @@ public final class NewsServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new NewsServiceFileDescriptorSupplier())
-              .addMethod(getFetchLatestNewsMethod())
+              .addMethod(getFetchLatestTechNewsMethod())
+              .addMethod(getFetchLatestPoliticalNewsMethod())
               .build();
         }
       }

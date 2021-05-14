@@ -4,6 +4,15 @@ import java.util.Calendar;
 public class NewsArticle {
     int _id;
     String homeTitle;
+
+    public String getStoryLink() {
+        return storyLink;
+    }
+
+    public void setStoryLink(String storyLink) {
+        this.storyLink = storyLink;
+    }
+
     String storyLink;
     String imgLink;
     String articleTitle;
@@ -15,8 +24,8 @@ public class NewsArticle {
         return _id;
     }
 
-    public void set_id(int _id) {
-        this._id = _id;
+    public void set_id(String _id) {
+        this._id = Integer.parseInt(_id);
     }
 
     public String getHomeTitle() {
@@ -46,8 +55,7 @@ public class NewsArticle {
     public Calendar getPublishedDate() {
         return publishedDate;
     }
-
-    public void setPublishedDate(Calendar publishedDate) {
+void setPublishedDate(Calendar publishedDate) {
         this.publishedDate = publishedDate;
     }
 
@@ -65,5 +73,19 @@ public class NewsArticle {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    @Override
+    public String toString() {
+        return "NewsArticle{" +
+                "_id=" + _id +
+                ", homeTitle='" + homeTitle + '\'' +
+                ", storyLink='" + storyLink + '\'' +
+                ", imgLink='" + imgLink + '\'' +
+                ", articleTitle='" + articleTitle + '\'' +
+                ", publishedDate=" + publishedDate +
+                ", authorName='" + authorName + '\'' +
+                ", description='" + description + '\'' +
+                '}';
     }
 }

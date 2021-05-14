@@ -5,7 +5,8 @@ package org.newsio.grpc;
 
 
 service NewsService {
-  rpc fetchLatestNews(noParams) returns (stream News) {};
+  rpc fetchLatestTechNews(noParams) returns (stream News) {};
+  rpc fetchLatestPoliticalNews(noParams) returns (stream News) {};
 }
 
 message noParams {

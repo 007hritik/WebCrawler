@@ -2475,9 +2475,11 @@ public final class Newsio {
       "g.newsio.grpc.News\"h\n\004News\022\013\n\003_id\030\001 \001(\005\022" +
       "\r\n\005title\030\002 \001(\t\022\023\n\013description\030\003 \001(\t\022\016\n\006a" +
       "uthor\030\004 \001(\t\022\014\n\004date\030\005 \001(\t\022\021\n\timageLink\030\006" +
-      " \001(\t2V\n\013NewsService\022G\n\017fetchLatestNews\022\031" +
-      ".org.newsio.grpc.noParams\032\025.org.newsio.g" +
-      "rpc.News\"\0000\001b\006proto3"
+      " \001(\t2\254\001\n\013NewsService\022K\n\023fetchLatestTechN" +
+      "ews\022\031.org.newsio.grpc.noParams\032\025.org.new" +
+      "sio.grpc.News\"\0000\001\022P\n\030fetchLatestPolitica" +
+      "lNews\022\031.org.newsio.grpc.noParams\032\025.org.n" +
+      "ewsio.grpc.News\"\0000\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

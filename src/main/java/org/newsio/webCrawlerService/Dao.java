@@ -2,15 +2,15 @@ package org.newsio.webCrawlerService;
 
 import java.util.Collection;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
-public interface Dao<T, I>{
+public interface Dao<T>{
     Optional<T> get(int id);
     Collection<T> getAll();
     Optional<List<String>> getLatestDatabase();
 
-    Optional<I> save(T t);
-    Optional<List<T>> getLatest();
+    void save(T t);
     void update(T t);
     void delete(T t);
 }
